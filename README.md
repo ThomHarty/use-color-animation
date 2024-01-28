@@ -5,5 +5,5 @@ Use Color Animation hook for React Native
 ## Installation
 
 ```sh
-yarn add use-color-animation
+yarn add rn-use-color-animation
 ```
