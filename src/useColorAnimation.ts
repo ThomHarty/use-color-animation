@@ -9,6 +9,7 @@ import {
 import type { ColorAnimation } from './ColorAnimation';
 
 export const useColorAnimation = ({
+  key,
   start,
   end,
   isEnd,
@@ -32,7 +33,7 @@ export const useColorAnimation = ({
 
   const color = useAnimatedStyle(() => {
     return {
-      color: interpolateColor(shared.value, [0, 1], [start, end]),
+      [key]: interpolateColor(shared.value, [0, 1], [start, end]),
     };
   });
 
