@@ -9,12 +9,13 @@ import {
 import type { ColorAnimation } from './ColorAnimation';
 
 export const useColorAnimation = ({
-  key,
+  key = 'color',
   start,
   end,
   isEnd,
   duration,
 }: ColorAnimation) => {
+  console.log('key: ', key)
   const getSharedValue = useCallback(() => {
     if (isEnd) {
       return 1;
