@@ -1,5 +1,5 @@
 {
-  "name": "use-color-animation",
+  "name": "rn-use-color-animation",
   "version": "0.1.0",
   "description": "Use Color Animation hook for React Native",
   "main": "lib/commonjs/index",
