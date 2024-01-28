@@ -9,12 +9,13 @@ import {
 import type { ColorAnimation } from './ColorAnimation';
 
 export const useColorAnimation = ({
-  key = 'color',
+  key,
   start,
   end,
   isEnd,
   duration,
 }: ColorAnimation) => {
+  const styleKey = key;
   const getSharedValue = useCallback(() => {
     if (isEnd) {
       return 1;
@@ -33,7 +34,7 @@ export const useColorAnimation = ({
 
   const color = useAnimatedStyle(() => {
     return {
-      [key]: interpolateColor(shared.value, [0, 1], [start, end]),
+      [styleKey]: interpolateColor(shared.value, [0, 1], [start, end]),
     };
   });
 
