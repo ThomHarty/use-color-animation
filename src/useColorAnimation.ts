@@ -32,7 +32,6 @@ export const useColorAnimation = ({
   }, [isEnd, duration, getSharedValue, shared]);
 
   const color = useAnimatedStyle(() => {
-    console.log('key: ', key)
     return {
       [key]: interpolateColor(shared.value, [0, 1], [start, end]),
     };
